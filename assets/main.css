@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    transition: background 0.2s linear;
+    font-family: "Space Mono", monospace;
+    margin: 0 10%;
+    color: #777a92;
+    min-height: 100vh;
+    background: #e4e5f1;
+    background-image: url('img/bg-desktop-light.jpg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: flex-start;
+    padding: 5rem 0;
+}
+h1{
+  color: #fff;
+  font-size: 3rem;
+}
+.flex-row{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+body.dark {
+    background-color: #161722;
+    color: #777a92;
+    background-image: url('img/bg-desktop-dark.jpg');
+
+}
+
+a{
+    color: #0079FF;
+}
+.wrapper{
+    width: 70%;
+}
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+label {
+    cursor: pointer;
+}
+.dark-text {
+    text-transform: uppercase;
+    display: flex;
+    color: #697C9A;
+    align-items: center;
+}
+
+.ligth-text {
+    text-transform: uppercase;
+    display: none;
+    color: #fff;
+}
+
+body.dark .dark-text{
+    display: none;
+}
+
+body.dark .ligth-text {
+    display: flex;
+    align-items: center;
+}
+.dark-text img, .ligth-text img{
+    margin-left: 5px;
+}
+
+.add-new-item{
+  background: #25273c;
+  height: 65px;
+  border-radius: 5px;
+  margin: 0 0 25px;
+  padding: 0 25px;
+  position: relative;
+  box-shadow: 0px 12px 30px hsla(210, 16%, 56%, 0.15);
+}
+
+.add-new-item #addItem{
+  background: transparent;
+  color: #cacde8;
+  border: none;
+  outline: 0;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  margin: 4px 0 0 45px;
+  letter-spacing: -0.3px;
+}
+.add-new-item span {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #cacde8;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  left: 25px;
+  top: 21px;
+  cursor: pointer;
+}
+
+.add-new-item span:hover{
+  background: center url(./img/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%) 100%);
+}
+
+.content{
+  border-radius: 5px;
+  box-shadow: 0px 12px 30px hsla(210, 16%, 56%, 0.15);
+}
+body .add-new-item, body .content{
+  background: #fff;
+}
+
+.content ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.content ul li{
+  padding: 0 10px 0 25px;
+  min-height: 65px;
+  border-bottom: 1px solid #cacde8;
+  position: relative;;
+}
+
+.content ul li input[type="checkbox"]{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+.content ul li label{
+  position: relative;
+  cursor: pointer;
+  padding: 2px 0 0 45px;
+  font-size: 18px;
+}
+
+.checkmark{
+  position: absolute;
+  top: -5px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+}
+
+ul li.hidden{
+  display: none;
+}
+
+.content ul li input[type="checkbox"] ~ .checkmark{
+  border: 1px solid #cacde8;
+  border-radius: 50px;
+}
+
+.content ul li input[type="checkbox"] ~ .checkmark:hover{
+  border: 0;
+  background: linear-gradient(135deg, hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%) 100%);
+}
+
+.content ul li input[type="checkbox"] ~ .checkmark:hover:before {
+  content: "";
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #fff;
+  display: block;
+  top: 1px;
+  position: relative;
+  left: 1px;}
+
+.content ul li input[type="checkbox"]:checked ~ .checkmark{
+  background: center url(./img/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%) 100%);
+}
+
+.content ul li input[type="checkbox"]:checked ~ .text {
+  text-decoration: line-through;
+}
+
+.remove{
+  background: url(./img/icon-cross.svg) no-repeat;
+  height: 18px;
+  width: 18px;
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+ul li:hover .remove{
+  display: block;
+}
+
+.items-left{
+  margin-right: 85px;
+  font-size: 14px;
+
+}
+.bottom-items{
+  padding: 20px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  align-items: baseline;
+  border-radius: 5px;
+  background: #fff;
+}
+.filter{
+  margin-right: 50px;
+  font-size: 14px;
+
+}
+.filter input[type="radio"]{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  font-size: 14px;
+
+}
+.filter label{
+  cursor: pointer;
+  padding: 0 10px;
+  transition: .3s;
+  font-size: 14px;
+}
+.filter label:hover{
+  color: #3a7bfd;
+  opacity: 0.8;
+  transition: .3s;
+
+}
+.filter span{
+  font-size: 14px;
+
+}
+.filter input[type="radio"]:checked ~ span {
+  color: #3a7bfd;
+  opacity: 1;
+}
+.clear{
+  cursor: pointer;
+  color: #777a92;
+  transition: .3s;
+  font-size: 14px;
+  opacity: 0.7;
+
+}
+.clear:hover{
+  color: #3a7bfd;
+  transition: .3s;
+  opacity: 1;
+}
+
+
+
+
+body.dark .add-new-item, body.dark .content, body.dark .content ul li input[type="checkbox"] ~ .checkmark:hover:before, body.dark .bottom-items {
+  background: #25273c;
+}

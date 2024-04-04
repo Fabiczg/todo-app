@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css"
+        integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/main.css">
+    <title>GitHub user search app
+    </title>
+</head>
+
+<body class="dark">
+    <div class="wrapper">
+        <div class="header">
+            <div>
+                <h1>TODO</h1>
+            </div>
+            <div class="color-theme">
+                <input type="checkbox" class="checkbox" checked id="checkbox">
+                <label for="checkbox" class="label" >
+                    <span class="dark-text">
+                        <img src="assets/img/icon-moon.svg" alt="Dark">
+                    </span>
+                    <span class="ligth-text">
+                        <img src="assets/img/icon-sun.svg" alt=""> </span>
+                </label>
+            </div>
+        </div>
+        <div class="add-new-item flex-row">
+            <span></span>
+            <input type="text" placeholder="Create a new todo..." name="addItem" id="addItem">
+        </div>
+        <section class="content">
+            <ul id="todoList">
+                <li class="flex-row" draggable="true">
+                    <label class="list-item">
+                        <input type="checkbox" name="todoItem" checked>
+                        <span class="checkmark"></span>
+                        <span class="text">Text 1</span>
+                    </label>
+                    <span class="remove"></span>
+                </li>
+                <li class="flex-row" draggable="true">
+                    <label class="list-item">
+                        <input type="checkbox" name="todoItem">
+                        <span class="checkmark"></span>
+                        <span class="text">Text 2</span>
+                    </label>
+                    <span class="remove"></span>
+                </li>
+                <li class="flex-row" draggable="true">
+                    <label class="list-item">
+                        <input type="checkbox" name="todoItem">
+                        <span class="checkmark"></span>
+                        <span class="text">Text 3</span>
+                    </label>
+                    <span class="remove"></span>
+                </li>
+                <li class="flex-row" draggable="true">
+                    <label class="list-item">
+                        <input type="checkbox" name="todoItem" checked>
+                        <span class="checkmark"></span>
+                        <span class="text">Text 4</span>
+                    </label>
+                    <span class="remove"></span>
+                </li>
+            </ul>
+        </section>
+        <div class="bottom-items flex-row">
+            <div class="items-left"><span id="itemCount">0</span> items left</div>
+            <div class="filter flex-row">
+                <label>
+                    <input type="radio" name="filter" id="all" checked>
+                    <span>All</span>
+                </label>
+                <label>
+                    <input type="radio" name="filter" id="active">
+                    <span>Active</span>
+                </label>
+                <label>
+                    <input type="radio" name="filter" id="completed">
+                    <span>Completed</span>
+                </label>
+            </div>
+            <span class="clear">Clear Completed</span>
+        </div>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="assets/main.js"></script>
+</body>
+
+</html>
